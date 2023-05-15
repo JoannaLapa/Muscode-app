@@ -1,13 +1,17 @@
 <template>
   <main>
-    <h1>Muscode App</h1>
-    <TodoList />
-    <WishTable :tableElements="wishes" :keys="wishKeys" />
-    <ul>
-      <li v-for="wish in wishes" :key="wish.id">
-      <WishItem :element="wish"/>
-    </li>
-    </ul>
+    <div class="p-4">
+      <h1 class="text-primary-200 font-bold text-md text-center p-4">Muscode App</h1>
+      <div class="grid grid-cols-1">
+        <TodoList />
+        <WishTable :tableElements="wishes" :keys="wishKeys" />
+        <ul>
+          <li v-for="wish in wishes" :key="wish.id">
+            <WishItem :element="wish" />
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -18,6 +22,6 @@ import WishItem from '../components/basicComponents/wish/WishItem.vue'
 import { useWishesStore } from '../stores/wishes.js'
 
 const wishStore = useWishesStore()
-const wishes = wishStore.wishes;
-const wishKeys = wishStore.wishKeys;
+const wishes = wishStore.wishes
+const wishKeys = wishStore.wishKeys
 </script>
