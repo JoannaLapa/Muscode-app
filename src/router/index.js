@@ -10,7 +10,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       children: [
-        { path: 'edit', component: EditWishItem },
+        { path: 'edit/:id', component: EditWishItem },
       ]
     },
   ]
