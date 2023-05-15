@@ -10,11 +10,11 @@ export const useTodoStore = defineStore('todo', {
         },
         {
           id: 1,
-          description: 'sed do eiusmod tempor incididunt'
+          description: 'Sed do eiusmod tempor incididunt'
         },
         {
           id: 2,
-          description: 'labore et dolore magna aliqua'
+          description: 'Labore et dolore magna aliqua'
         },
         {
           id: 3,
@@ -22,7 +22,7 @@ export const useTodoStore = defineStore('todo', {
         },
         {
           id: 4,
-          description: 'minima veniam, quis nostrum exercitationem'
+          description: 'Minima veniam, quis nostrum exercitationem'
         },
       ],
 
