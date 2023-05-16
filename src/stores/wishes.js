@@ -10,10 +10,7 @@ export const useWishesStore = defineStore('wishes', {
           price: 1000,
           sale: 649,
           currency: '$',
-          photoPng: 'src/assets/img1_170x255.png',
-          photoWebp: 'src/assets/img1_170x255.webp',
-          photoPngDesktop: 'src/assets/img1.png',
-          photoWebpDesktop: 'src/assets/img1.webp'
+          photo: 'src/assets/img1.jpg',
         },
         {
           id: 1,
@@ -21,20 +18,14 @@ export const useWishesStore = defineStore('wishes', {
           price: 600,
           sale: 800,
           currency: '$',
-          photoPng: 'src/assets/img2_170x255.png',
-          photoWebp: 'src/assets/img2_170x255.webp',
-          photoPngDesktop: 'src/assets/img2.png',
-          photoWebpDesktop: 'src/assets/img2.webp'
+          photo: 'src/assets/img2.jpg',
         },
         {
           id: 2,
           name: 'MacBook Pro',
           price: 8000,
           currency: 'PLN',
-          photoPng: 'src/assets/img3_170x255.png',
-          photoWebp: 'src/assets/img3_170x255.webp',
-          photoPngDesktop: 'src/assets/img3.png',
-          photoWebpDesktop: 'src/assets/img3.webp'
+          photo: 'src/assets/img3.jpg',
         }
       ],
 

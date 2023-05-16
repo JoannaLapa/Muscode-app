@@ -41,8 +41,13 @@ export default {
         'primary-200': '#333', //title color
         'success-100': '#862583', //color when focus
         'danger-100': '#9277FF',
+        'danger-200': "#D73737",
         'neutral-100': ' #f5f8fa', //hover color
         'neutral-200': '#b2b2b2' //color borders
+      },
+
+      maxWidth: {
+        96: '24rem', //384px
       },
 
       spacing: {

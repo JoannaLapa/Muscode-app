@@ -1,5 +1,5 @@
 <template>
-  <div class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:p-6" :class="{'sm:p-5': variant === 'primary'}">
+  <div class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:p-6" :class="{'lg:max-w-96': variant === 'primary'}">
     <slot />
   </div>
 </template>
