@@ -1,9 +1,9 @@
 <template>
   <section>
     <BaseBox variant="primary">
-      <div class="flex justify-between font-bold p-2 sm:p-0">
-        <h2>Lista todo</h2>
-        <h3>Wykonane: {{ counter }}</h3>
+      <div class="flex justify-between">
+        <BaseHeading title="Lista Todo" tag="h2"/>
+        <BaseHeading :title="`Wykonane: ${counter}`" tag="h3"/>
       </div>
       <ul class="py-2.5 text-xs divide-y-2" @click="v$.$reset()">
         <TodoItem
@@ -44,6 +44,7 @@
 <script setup>
 import TodoItem from './TodoItem.vue'
 import BaseBox from '../UI/BaseBox.vue'
+import BaseHeading from '../UI/BaseHeading.vue'
 import { useTodoStore } from '../../../stores/todo.js'
 import { computed, reactive } from 'vue'
 import { useVuelidate } from '@vuelidate/core'

@@ -2,7 +2,7 @@
   <main>
     <div class="p-4">
       <h1 class="text-primary-200 font-bold text-md text-center p-4">Muscode App</h1>
-      <div class="grid grid-cols-1">
+      <div class="grid grid-cols-1 gap-4">
         <TodoList />
         <WishTable :tableElements="wishes" :keys="wishKeys" />
         <ul>
