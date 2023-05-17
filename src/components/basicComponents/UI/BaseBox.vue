@@ -1,7 +1,11 @@
 <template>
   <div
-    class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:p-6 "
-    :class="{'lg:max-w-96 ': variant === 'primary', 'pb-3': variant === 'secondary'}"
+    class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:px-5 sm:pt-5"
+    :class="{
+      'max-w-96 md:min-h-[316px]': variant === 'primary',
+      'max-w-96 pb-3, min-h-[316px] lg:max-w-full': variant === 'secondary',
+      'max-w-96 min-h-[330px] overflow-hidden relative': variant === 'tertiary'
+    }"
   >
     <slot />
   </div>

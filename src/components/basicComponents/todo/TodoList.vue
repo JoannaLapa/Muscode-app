@@ -2,18 +2,18 @@
   <section>
     <BaseBox variant="primary">
       <div class="flex justify-between">
-        <BaseHeading title="Lista Todo" tag="h2"/>
+        <BaseHeading title="Lista todo" tag="h2"/>
         <BaseHeading :title="`Wykonane: ${counter}`" tag="h3"/>
       </div>
-      <ul class="py-2.5 text-xs divide-y-2" @click="v$.$reset()">
+      <ul class="pt-[10px] text-xs divide-y-[1px] flex flex-col justify-center" @click="v$.$reset()">
         <TodoItem
           v-for="{ id, description } in todos"
           :key="id"
           :id="id"
           :description="description"
         />
-        <li class="px-1 py-2 sm:px-2.5 sm:py-1">
-          <form @submit.prevent="submitForm" class="flex gap-1">
+        <li class="px-1.5 py-2 sm:px-2.5 sm:py-1">
+          <form @submit.prevent="submitForm" class="flex gap-1.5">
             <label
               for="todo"
               class="text-lg font-bold text-neutral-200 px-1"

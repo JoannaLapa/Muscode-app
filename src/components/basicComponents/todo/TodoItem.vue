@@ -1,7 +1,7 @@
 <template>
   <li class="px-1 py-2 sm:p-2.5">
     <input class="sr-only" type="checkbox" id="id" value="checked" v-model="checkedboxValues[id]" />
-    <label for="description" class="flex items-center gap-1 font-medium">
+    <label for="description" class="flex items-center gap-2 font-medium min-h-[10px]">
       <CheckIcon @click="toggleValue(id)" :checked="checked"/>
       {{ description }}</label
     >

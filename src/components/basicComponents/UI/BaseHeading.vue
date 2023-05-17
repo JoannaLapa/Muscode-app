@@ -11,7 +11,7 @@ defineProps({
   tag: {
     type: String,
     default: 'h2',
-    validation: (tag) => ['h2', 'h3', 'caption'].includes(tag)
+    validation: (tag) => ['h2', 'h3', 'caption', 'figcaption'].includes(tag)
   }
 })
 </script>

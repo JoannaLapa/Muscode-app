@@ -47,6 +47,10 @@ export default {
         'neutral-200': '#b2b2b2' //color borders
       },
 
+      gridTemplateColumns: {
+        '3-equal': 'repeat(3, 1fr)'
+      },
+
       maxWidth: {
         96: '24rem' //384px
       },
@@ -56,6 +60,10 @@ export default {
         1.5: '0.375rem', //6px
         2.5: '0.625rem' //10px
       },
+
+      textUnderlineOffset: {
+        middle: '-40%',
+    },
 
       width: {
         '2/25': '8%',

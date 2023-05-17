@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="lg:col-start-2 lg:col-end-4">
     <BaseBox variant="secondary">
       <table class="table-fixed w-full border-collapse text-left p-2">
         <BaseHeading tag="caption" title="Lista Produktów" class="sm:pb-3" />
@@ -8,11 +8,11 @@
           <!-- <th v-for="keyName in keys" :key="keyName" scope="col">{{ keyName }}</th> -->
           <th scope="col" class="w-2/25 pl-2.5 pb-1.5">{{ keys[0] }}</th>
           <th scope="col" class="w-11/25 pt-1">{{ keys[1] }}</th>
-          <th scope="col" class="w-5/25 sm:hidden pt-1">%</th>
-          <th scope="col" class="hidden sm:table-cell w-5/25 pt-1">{{ keys[2] }}</th>
+          <th scope="col" class="w-5/25 lg:hidden pt-1">%</th>
+          <th scope="col" class="hidden lg:table-cell w-5/25 pt-1">{{ keys[2] }}</th>
           <th scope="col" class="w-4/25 pt-1">{{ keys[3] }}</th>
-          <th scope="col" class="w-3/25 pt-1 sm:hidden">wal.</th>
-          <th scope="col" class="w-3/25 pt-1 hidden sm:table-cell">{{ keys[4] }}</th>
+          <th scope="col" class="w-3/25 pt-1 lg:hidden">wal.</th>
+          <th scope="col" class="w-3/25 pt-1 hidden lg:table-cell">{{ keys[4] }}</th>
         </thead>
         <tbody class="divide-y-2 border-y-2">
           <tr

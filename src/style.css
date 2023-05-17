@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      font-family: 'Roboto', sans-serif;
-      color: #384a5c;
-    }
+  html {
+    color: #384a5c;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 0.02em;
+    text-decoration-skip-ink: none;
   }
+}
