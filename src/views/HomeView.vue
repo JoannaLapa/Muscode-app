@@ -1,8 +1,8 @@
 <template>
   <main>
-    <div class="p-4 max-w-[1180px] xl-w-[1180px] xl:p-0 m-auto">
-      <h1 class="text-primary-200 font-medium text-md md:text-3xl text-center p-4 md:pt-10 md:pb-6">Muscode App</h1>
-      <div class="grid grid-cols-1 gap-[14px] sm:grid-cols-2 md:py-4 xl:grid-cols-3">
+    <div class="p-4 md:max-w-[814px] lg:max-w-[1180px] xl:w-[1180px] xl:p-0 m-auto">
+      <h1 class="text-primary-200 font-medium text-xl sm:text-3xl text-center p-4 md:pt-10 md:pb-6">Muscode App</h1>
+      <div class="grid auto-cols-auto gap-[14px] sm:grid-cols-2 md:py-4 xl:grid-cols-3 justify-center w-full">
         <TodoList />
         <WishTable :tableElements="wishes" :keys="wishKeys" />
 

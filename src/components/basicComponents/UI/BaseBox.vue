@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:px-5 sm:pt-5"
+    class="border-neutral-200 rounded-lg shadow-3xl p-1 sm:px-5 sm:pt-5 h-full"
     :class="{
       'max-w-96 md:min-h-[316px]': variant === 'primary',
       'max-w-96 pb-3, min-h-[316px] lg:max-w-full': variant === 'secondary',

@@ -1,5 +1,5 @@
 <template>
-  <section class="lg:col-start-2 lg:col-end-4">
+  <section class="lg:col-start-2 lg:col-end-4 w-fit">
     <BaseBox variant="secondary">
       <table class="table-fixed w-full border-collapse text-left p-2">
         <BaseHeading tag="caption" title="Lista Produktów" class="sm:pb-3" />

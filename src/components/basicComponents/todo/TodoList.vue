@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="min-w-fit">
     <BaseBox variant="primary">
       <div class="flex justify-between">
         <BaseHeading title="Lista todo" tag="h2"/>
