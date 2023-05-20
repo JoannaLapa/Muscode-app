@@ -1,5 +1,5 @@
 <template>
      <div>
-        <p class="text-xs text-primary-300">Pole nie może być puste</p>
+        <p class="text-xs text-danger-200 text-end">Pole nie może być puste</p>
       </div>
 </template>
