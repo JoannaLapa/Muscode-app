@@ -2,10 +2,10 @@
   <section class="min-w-fit">
     <BaseBox variant="primary">
       <div class="flex justify-between">
-        <BaseHeading title="Lista todo" tag="h2"/>
-        <BaseHeading :title="`Wykonane: ${counter}`" tag="h3"/>
+        <BaseHeading title="Lista todo" tag="h2" />
+        <BaseHeading :title="`Wykonane: ${counter}`" tag="h3" />
       </div>
-      <ul class="pt-[10px] text-xs divide-y-[1px] flex flex-col justify-center" @click="v$.$reset()">
+      <ul class="pt-2.5 text-xs divide-y-1 flex flex-col justify-center" @click="v$.$reset()">
         <TodoItem
           v-for="{ id, description } in todos"
           :key="id"
@@ -33,9 +33,7 @@
               @keyup.enter="addTodo"
             />
           </form>
-          <div v-if="v$.newTodo.$error">
-            <p class="text-xs text-danger-200">Can't be empty</p>
-          </div>
+          <BaseErrorMsg v-if="v$.newTodo.$error" />
         </li>
       </ul>
     </BaseBox>
@@ -45,6 +43,7 @@
 <script setup>
 import TodoItem from './TodoItem.vue'
 import BaseBox from '../UI/BaseBox.vue'
+import BaseErrorMsg from '../UI/BaseErrorMsg.vue'
 import BaseHeading from '../UI/BaseHeading.vue'
 import { useTodoStore } from '../../../stores/todo.js'
 import { ref, reactive, computed } from 'vue'
@@ -70,8 +69,8 @@ const rules = {
 const v$ = useVuelidate(rules, state)
 
 const addTodo = async () => {
-  const isFormCorrect = await v$.value.$validate();
-  if (!isFormCorrect) return;
+  const isFormCorrect = await v$.value.$validate()
+  if (!isFormCorrect) return
   todoStore.addTodo(state.newTodo)
   state.newTodo = ''
 }
