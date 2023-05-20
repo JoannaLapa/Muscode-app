@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag">{{ title }}</component>
+  <component :is="tag" class="w-fit py-[3px] px-3 text-xs border-[1.5px]" :class="{'bg-success-100 border-success-100 text-neutral-100': variant === 'primary', 'border-neutral-200 ': variant === 'pure'}">{{ title }}</component>
 </template>
 
 <script setup>
