@@ -4,9 +4,17 @@
 
 @layer base {
   html {
+    background-color: #f5f8fa;
     color: #384a5c;
     font-family: 'Roboto', sans-serif;
     word-spacing: 0.02em;
     text-decoration-skip-ink: none;
+  }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
   }
 }
