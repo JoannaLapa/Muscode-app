@@ -10,7 +10,7 @@ export const useWishesStore = defineStore('wishes', {
           price: 1000,
           sale: 649,
           currency: '$',
-          photo: 'src/assets/img1.jpg'
+          photo: '/assets/img1.jpg'
         },
         {
           id: 1,
@@ -18,14 +18,14 @@ export const useWishesStore = defineStore('wishes', {
           price: 800,
           sale: 600,
           currency: '$',
-          photo: 'src/assets/img2.jpg'
+          photo: '/assets/img2.jpg'
         },
         {
           id: 2,
           name: 'MacBook Pro',
           price: 8000,
           currency: 'PLN',
-          photo: 'src/assets/img3.jpg'
+          photo: '/assets/img3.jpg'
         }
       ],
 
