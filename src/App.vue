@@ -8,5 +8,6 @@ import { onMounted } from 'vue'
 import { useTodoStore } from './stores/todo.js'
 
 const todoStore = useTodoStore()
-onMounted(todoStore.addCheckboxValues)
+
+onMounted(todoStore.setCheckboxValues)
 </script>
