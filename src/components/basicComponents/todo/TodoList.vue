@@ -11,9 +11,10 @@
           :key="id"
           :id="id"
           :description="description"
+          :checkedbox-values="checkedboxValues"
         />
         <li class="px-1.5 py-2 sm:px-2.5 sm:py-1">
-          <form @submit.prevent="submitForm" class="flex gap-1.5">
+          <form @submit.prevent="addTodo" class="flex gap-1.5">
             <label
               for="todo"
               class="text-lg font-bold text-neutral-200 px-1"
@@ -46,13 +47,14 @@ import TodoItem from './TodoItem.vue'
 import BaseBox from '../UI/BaseBox.vue'
 import BaseHeading from '../UI/BaseHeading.vue'
 import { useTodoStore } from '../../../stores/todo.js'
-import { computed, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import { required } from '@vuelidate/validators'
 
 const todoStore = useTodoStore()
-const todos = todoStore.todos
+const todos = computed(() => todoStore.getTodos)
 const counter = computed(() => todoStore.countedChecks)
+const checkedboxValues = ref([])
 
 const state = reactive({
   newTodo: ''
@@ -72,6 +74,5 @@ const addTodo = async () => {
   if (!isFormCorrect) return;
   todoStore.addTodo(state.newTodo)
   state.newTodo = ''
-  
 }
 </script>
