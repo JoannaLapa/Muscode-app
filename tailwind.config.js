@@ -8,6 +8,14 @@ export default {
   content: ['./index.html', './src/**/*.{vue,js}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'chevron': "url('/assets/chevron-down-solid.svg')",
+      },
+
+      backgroundSize: {
+        '1': '0.7rem',
+      },
+
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans]
       },
@@ -61,6 +69,10 @@ export default {
 
       minHeight: {
         2.5: '0.625rem' //10px
+      },
+
+      minWidth: {
+        62.5: '15.625rem', //250px
       },
 
       spacing: {
