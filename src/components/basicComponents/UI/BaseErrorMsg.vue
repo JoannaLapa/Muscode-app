@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[7px]] text-danger-200 text-end w-full">
+  <div class="text-xxxs text-danger-200 text-end -m-1">
     <p>{{ title }}</p>
   </div>
 </template>
