@@ -1,7 +1,7 @@
 <template>
   <div class="border-b-1 border-neutral-200 px-1 pb-0.5">
     <div class="flex flex-col gap-0.5">
-        <label :for="element" class="font-bold text-neutral-200">{{ title }}</label>
+        <label :for="element" class="font-normal text-xs">{{ title }}</label>
       <slot />
     </div>
   </div>

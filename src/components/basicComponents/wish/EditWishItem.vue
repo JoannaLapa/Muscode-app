@@ -24,15 +24,15 @@
               <img :src="wish.photo" :alt="wish.name" class="w-32 h-32 lg:w-50 lg:h-50" />
             </div>
 
-            <div class="w-full px-2.7 text-xs flex flex-col gap-3.7">
+            <div class="w-full px-2.7 text-sm flex flex-col gap-3.7 lg:pl-3">
               <BaseForm :element="wish.name" title="Nazwa produktu">
                 <input
                   :id="wish.name"
                   type="text"
                   v-model="state.newWishName"
-                  :class="v$.newWishName.$error ? 'border-2 border-primary-300' : ''"
+                  :class="v$.newWishName.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
                   @blur="v$.newWishName.$touch"
-                  class="font-medium text-xs"
+                  class="font-medium"
                 />
               </BaseForm>
 
@@ -41,9 +41,9 @@
                   :id="wish.price"
                   type="number"
                   v-model="v$.newWishPrice.$model"
-                  :class="v$.newWishPrice.$error ? 'border-2 border-primary-300' : ''"
+                  :class="v$.newWishPrice.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
                   @blur="v$.newWishPrice.$touch"
-                  class="font-medium text-xs"
+                  class="font-medium"
                 />
               </BaseForm>
 
@@ -52,9 +52,9 @@
                   :id="wish.sale"
                   type="number"
                   v-model="v$.newWishSale.$model"
-                  :class="v$.newWishSale.$error ? 'border-2 border-primary-300' : ''"
+                  class="font-medium"
+                  :class="v$.newWishSale.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
                   @blur="v$.newWishSale.$touch"
-                  class="font-medium text-xs"
                 />
                 <BaseErrorMsg
                   v-for="error of v$.$errors"
@@ -66,7 +66,7 @@
               <BaseForm :element="currency" title="Waluta">
                 <select
                   id="currency"
-                  class="bg-white focus:outline-none appearance-none pt-0.5 bg-chevron bg-no-repeat bg-right-top bg-1"
+                  class="bg-white pt-0.5 font-bold pr-1 -mr-1"
                   v-model="selected"
                 >
                   <option>$</option>
