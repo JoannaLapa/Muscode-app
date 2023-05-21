@@ -28,7 +28,7 @@
               id="todo"
               placeholder="Dodaj nowy element checklisty"
               class="w-full text-xs font-bold indent-0.5"
-              :class="v$.newTodo.$error ? 'border-2 border-danger-200' : ''"
+              :class="v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
               @blur="v$.newTodo.$touch"
               @keyup.enter="addTodo"
             />
@@ -59,6 +59,10 @@ const state = reactive({
   newTodo: ''
 })
 
+/*
+validation
+*/
+
 const rules = {
   newTodo: {
     required,
@@ -67,6 +71,10 @@ const rules = {
 }
 
 const v$ = useVuelidate(rules, state)
+
+/*
+addTodo
+*/
 
 const addTodo = async () => {
   const isFormCorrect = await v$.value.$validate()

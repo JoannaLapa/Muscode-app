@@ -33,7 +33,23 @@ export const useWishesStore = defineStore('wishes', {
     }
   },
 
-  actions: {},
+  actions: {
+    updateWishItem(id, name, price, sale, currency) {
+    const wish = this.wishes.find((wish) => wish.id === id);
+    wish.name = name
+    wish.price = price
+    wish.sale = sale
+    wish.currency = currency
+    if(wish.sale === undefined || wish.sale === "") {
+      delete wish.sale
+    }
+    return wish
+    },
+
+    toggleShowModal() {
+      this.showModal = !this.showModal
+    }
+  },
 
       getters: {
         getWishes() {
@@ -53,6 +69,8 @@ export const useWishesStore = defineStore('wishes', {
             const sale = (state.wishes[id].sale / state.wishes[id].price) * 100
             return sale
           }
-        }
+        },
+
+
       }
 })
