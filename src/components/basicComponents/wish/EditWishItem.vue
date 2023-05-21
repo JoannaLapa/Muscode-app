@@ -33,7 +33,7 @@
                 :alt="wish.name"
                 :width="wish.photoEditWidth"
                 :height="wish.photoEditHeight"
-                class="max-h-[200px]"
+                class="max-h-50"
               />
             </div>
 
