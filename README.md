@@ -16,8 +16,8 @@ Used in this project:
 Future development: 
 
 - I installed Vitest and Cypress, because I would like to learn testing applications and it would be a good project for that
-- I would like to develop this application with moving data to firebase and learn data management with Firebase
-- I would like to add animiations for modal, loading spinner 
+- I would like to develop this application with moving data to firebase and learn Firebase data management and develop functionalities like adding wish products, removing & editing todos. 
+- I would like to add animiations for modal and loading spinner 
 
 ## Recommended IDE Setup
 
