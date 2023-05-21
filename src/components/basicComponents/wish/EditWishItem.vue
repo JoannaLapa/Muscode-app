@@ -13,15 +13,15 @@
         <form @submit.prevent="updateWishItem" class="grid grid-cols-1 h-full">
           <fieldset class="flex flex-col items-center gap-5">
             <div class="font-medium text-md md:text-xl w-full border-b-4 border-success-200">
-              <legend id="title" autofocus tabindex="0" class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7">
+              <legend id="title" autofocus tabindex="0" class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7 text-primary-200">
                 Edycja produktu:
 
                 <span class="">{{ wish.name }}</span>
               </legend>
             </div>
 
-            <div class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5">
-              <img :src="wish.photo" :alt="wish.name" class="w-32 h-32 lg:w-50 lg:h-50" />
+            <div class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5 flex items-center">
+              <img :src="wish.photoEdit" :alt="wish.name" :width="wish.photoEditWidth" :height="wish.photoEditHeight" class="max-h-[200px]"/>
             </div>
 
             <div class="w-full px-2.7 text-sm flex flex-col gap-3.7 lg:pl-3">

@@ -4,7 +4,7 @@
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
       <BaseHeading :title="element.name" tag="figcaption" />
       <div class="flex flex-col justify-center items-center py-2 w-full gap-3 text-center">
-        <img :src="element.photo" :alt="element.name" height="200" />
+        <img :src="element.photoBase" :alt="element.name" :height="element.photoBaseHeight" :width="element.photoBaseWidth"/>
         <div>
           <p class="text-success-100 font-bold text-base" v-if="element.sale">
             {{ `${element.sale} ${element.currency}` }}

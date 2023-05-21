@@ -7,6 +7,7 @@
     class="border-[1.6px] p-[1px] border-neutral-200 rounded-full cursor-pointer"
     :class="{'border-success-100': checked === true }"
   >
+  <title>Wykonano zadanie</title>
     <!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.-->
     <path
       class="fill-primary-200"

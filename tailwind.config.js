@@ -58,7 +58,6 @@ export default {
         'neutral-100': ' #f5f8fa', //hover color
         'neutral-200': '#b2b2b2', //color borders
         'neutral-300': '#00000080', // black with opacity 0.5
-        'neutral-400': '#cacaca', //color dividers
       },
 
       divideWidth: {
