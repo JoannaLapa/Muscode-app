@@ -64,7 +64,7 @@ export const useWishesStore = defineStore('wishes', {
     },
 
     toggleShowModal() {
-      this.showModal = !this.showModal
+      return this.showModal = !this.showModal
     }
   },
 
