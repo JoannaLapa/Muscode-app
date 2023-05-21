@@ -1,6 +1,23 @@
-# Muscode App
+# Muscode App - application for managing tasks and creating wishlists
 
 live site: https://muscode-task-management-app.netlify.app/
+
+Used in this project: 
+
+- Vue.js
+- Pinia
+- Vite
+- Vuelidate for form validations
+- TailwindCss 
+- ace DevTools, WAVE evaluation tool - Web Accessibility Testing tools
+- Pixel Perfect Pro extension 
+- [Squ](https://squoosh.app/editor) and [Photopea](https://www.photopea.com/) for pictures optimalizations
+
+Future development: 
+
+- I installed Vitest and Cypress, because I would like to learn testing applications and it would be a good project for that
+- I would like to develop this application with moving data to firebase and learn Firebase data management and develop functionalities like adding wish products, removing & editing todos. 
+- I would like to add animiations for modal and loading spinner 
 
 ## Recommended IDE Setup
 
