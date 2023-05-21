@@ -13,15 +13,28 @@
         <form @submit.prevent="updateWishItem" class="grid grid-cols-1 h-full">
           <fieldset class="flex flex-col items-center gap-5">
             <div class="font-medium text-md md:text-xl w-full border-b-4 border-success-200">
-              <legend id="title" autofocus tabindex="0" class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7 text-primary-200">
+              <legend
+                id="title"
+                autofocus
+                tabindex="0"
+                class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7 text-primary-200"
+              >
                 Edycja produktu:
 
                 <span class="">{{ wish.name }}</span>
               </legend>
             </div>
 
-            <div class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5 flex items-center">
-              <img :src="wish.photoEdit" :alt="wish.name" :width="wish.photoEditWidth" :height="wish.photoEditHeight" class="max-h-[200px]"/>
+            <div
+              class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5 flex items-center"
+            >
+              <img
+                :src="wish.photoEdit"
+                :alt="wish.name"
+                :width="wish.photoEditWidth"
+                :height="wish.photoEditHeight"
+                class="max-h-[200px]"
+              />
             </div>
 
             <div class="w-full px-2.7 text-sm flex flex-col gap-3.7 lg:pl-3">
@@ -30,7 +43,11 @@
                   :id="wish.name"
                   type="text"
                   v-model="state.newWishName"
-                  :class="v$.newWishName.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
+                  :class="
+                    v$.newWishName.$error
+                      ? 'focus:border-2 focus:border-danger-200 outline-none'
+                      : ''
+                  "
                   @blur="v$.newWishName.$touch"
                   class="font-medium"
                 />
@@ -41,7 +58,11 @@
                   :id="wish.price"
                   type="number"
                   v-model="v$.newWishPrice.$model"
-                  :class="v$.newWishPrice.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
+                  :class="
+                    v$.newWishPrice.$error
+                      ? 'focus:border-2 focus:border-danger-200 outline-none'
+                      : ''
+                  "
                   @blur="v$.newWishPrice.$touch"
                   class="font-medium"
                 />
@@ -53,9 +74,14 @@
                   type="number"
                   v-model="v$.newWishSale.$model"
                   class="font-medium"
-                  :class="v$.newWishSale.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
+                  :class="
+                    v$.newWishSale.$error
+                      ? 'focus:border-2 focus:border-danger-200 outline-none'
+                      : ''
+                  "
                   @blur="v$.newWishSale.$touch"
                 />
+
                 <BaseErrorMsg
                   v-for="error of v$.$errors"
                   :key="error.$uid"
@@ -79,7 +105,9 @@
             </div>
           </fieldset>
 
-          <div class="flex gap-1 p-4 lg:p-2.7 self-end items-start border-t-1 border-neutral-200 h-fit">
+          <div
+            class="flex gap-1 p-4 lg:p-2.7 self-end items-start border-t-1 border-neutral-200 h-fit"
+          >
             <BaseButton
               variant="primary"
               title="Zapisz"
@@ -110,6 +138,10 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, maxValue, minValue, helpers } from '@vuelidate/validators'
 import { reactive, computed, ref } from 'vue'
 
+/*
+props
+*/
+
 const props = defineProps({
   wishId: {
     type: Number,
@@ -117,10 +149,18 @@ const props = defineProps({
   }
 })
 
+/*
+emits
+*/
+
 const emit = defineEmits(['toggleModal'])
 const handleModal = () => {
   emit('toggleModal')
 }
+
+/*
+data
+*/
 
 const wishStore = useWishesStore()
 const wish = computed(() => wishStore.getWishById(props.wishId))

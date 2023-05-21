@@ -3,9 +3,14 @@
     <BaseBox variant="primary">
       <div class="flex justify-between">
         <BaseHeading title="Lista todo" tag="h2" />
+
         <BaseHeading :title="`Wykonane: ${counter}`" tag="h3" />
       </div>
-      <ul class="pt-2.5 mb-2.5 text-sm divide-y-1.5 divide-neutral-200 flex flex-col justify-center border-b-1.5 border-neutral-200" @click="v$.$reset()">
+
+      <ul
+        class="pt-2.5 mb-2.5 text-sm divide-y-1.5 divide-neutral-200 flex flex-col justify-center border-b-1.5 border-neutral-200"
+        @click="v$.$reset()"
+      >
         <TodoItem
           v-for="{ id, description } in todos"
           :key="id"
@@ -13,7 +18,8 @@
           :description="description"
           :checkedbox-values="checkedboxValues"
         />
-        <li class="px-1.5 py-2 sm:px-2.5 sm:py-1 ">
+
+        <li class="px-1.5 py-2 sm:px-2.5 sm:py-1">
           <form @submit.prevent="addTodo" class="flex gap-1.5">
             <label
               for="todo"
@@ -21,6 +27,7 @@
               aria-label="Dodaj nowy element checklisty"
               >+</label
             >
+
             <input
               type="text"
               name="nowe todo"
@@ -28,11 +35,14 @@
               id="todo"
               placeholder="Dodaj nowy element checklisty"
               class="w-full text-sm font-bold indent-0.5"
-              :class="v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
+              :class="
+                v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''
+              "
               @blur="v$.newTodo.$touch"
               @keyup.enter="addTodo"
             />
           </form>
+
           <BaseErrorMsg v-if="v$.newTodo.$error" />
         </li>
       </ul>

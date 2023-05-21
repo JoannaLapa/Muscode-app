@@ -15,8 +15,9 @@ export const useWishesStore = defineStore('wishes', {
           photoBaseHeight: 200,
           photoEdit: '/assets/img1_200_300.jpg',
           photoEditWidth: 200,
-          photoEditHeight: 300,
+          photoEditHeight: 300
         },
+
         {
           id: 1,
           name: 'iPad Pro 32GB',
@@ -28,8 +29,9 @@ export const useWishesStore = defineStore('wishes', {
           photoBaseHeight: 200,
           photoEdit: '/assets/img2_200_237.jpg',
           photoEditWidth: 200,
-          photoEditHeight: 237,
+          photoEditHeight: 237
         },
+
         {
           id: 2,
           name: 'MacBook Pro',
@@ -40,7 +42,7 @@ export const useWishesStore = defineStore('wishes', {
           photoBaseHeight: 200,
           photoEdit: '/assets/img3_343_200.jpg',
           photoEditWidth: 343,
-          photoEditHeight: 200,
+          photoEditHeight: 200
         }
       ],
 

@@ -7,27 +7,31 @@ export const useTodoStore = defineStore('todo', {
         {
           id: 0,
           description: 'Lorem ipsum dolor sit amet, consectetur',
-          checked: false,
+          checked: false
         },
+
         {
           id: 1,
           description: 'Sed do eiusmod tempor incididunt',
-          checked: false,
+          checked: false
         },
+
         {
           id: 2,
           description: 'Labore et dolore magna aliqua',
-          checked: false,
+          checked: false
         },
+
         {
           id: 3,
           description: 'Sed ut perspiciatis unde omnis iste natus',
-          checked: false,
+          checked: false
         },
+
         {
           id: 4,
           description: 'Minima veniam, quis nostrum exercitationem',
-          checked: false,
+          checked: false
         }
       ],
 
@@ -41,7 +45,7 @@ export const useTodoStore = defineStore('todo', {
     },
 
     getCheckboxValues() {
-      return this.checkboxValues;
+      return this.checkboxValues
     },
 
     countedChecks() {
@@ -64,8 +68,8 @@ export const useTodoStore = defineStore('todo', {
     },
 
     toggleCheckboxValue(id, value) {
-      console.log(this.checkboxValues);
-      return this.checkboxValues[id] = value
+      console.log(this.checkboxValues)
+      return (this.checkboxValues[id] = value)
     }
   }
 })

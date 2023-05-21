@@ -1,6 +1,6 @@
 # Muscode App
 
-This template should help get you started developing with Vue 3 in Vite.
+live site: https://muscode-task-management-app.netlify.app/
 
 ## Recommended IDE Setup
 

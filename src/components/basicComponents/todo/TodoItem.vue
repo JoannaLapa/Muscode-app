@@ -4,6 +4,7 @@
       <CheckIcon :checked="checkboxValue" />
       {{ description }}
     </label>
+
     <input
       class="sr-only"
       type="checkbox"
@@ -23,6 +24,11 @@ import { ref } from 'vue'
 const todoStore = useTodoStore()
 
 const checkboxValue = ref(false)
+
+/*
+props
+*/
+
 const props = defineProps({
   id: {
     type: Number,
@@ -33,6 +39,10 @@ const props = defineProps({
     required: true
   }
 })
+
+/*
+add new todo
+*/
 
 const addValue = () => {
   todoStore.toggleCheckboxValue(props.id, checkboxValue.value)

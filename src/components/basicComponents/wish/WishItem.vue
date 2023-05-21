@@ -2,13 +2,22 @@
   <BaseBox variant="tertiary" role="button" @click="toggleModal">
     <figure>
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
+
       <BaseHeading :title="element.name" tag="figcaption" />
+
       <div class="flex flex-col justify-center items-center py-2 w-full gap-3 text-center">
-        <img :src="element.photoBase" :alt="element.name" :height="element.photoBaseHeight" :width="element.photoBaseWidth"/>
+        <img
+          :src="element.photoBase"
+          :alt="element.name"
+          :height="element.photoBaseHeight"
+          :width="element.photoBaseWidth"
+        />
+
         <div>
           <p class="text-success-100 font-bold text-base" v-if="element.sale">
             {{ `${element.sale} ${element.currency}` }}
           </p>
+
           <p
             :class="
               element.hasOwnProperty('sale') === true
@@ -32,7 +41,15 @@ import BaseBox from '../UI/BaseBox.vue'
 import BaseHeading from '../UI/BaseHeading.vue'
 import { ref, defineAsyncComponent } from 'vue'
 
+/*
+async component
+*/
+
 const EditWishItem = defineAsyncComponent(() => import('./EditWishItem.vue'))
+
+/*
+props
+*/
 
 defineProps({
   element: {
@@ -40,6 +57,10 @@ defineProps({
     required: true
   }
 })
+
+/*
+showModal logic
+*/
 
 const showModal = ref(false)
 const toggleModal = () => {
