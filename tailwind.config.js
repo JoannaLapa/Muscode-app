@@ -9,11 +9,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'chevron': "url('/assets/chevron-down-solid.svg')",
+        chevron: "url('/assets/chevron-down-solid.svg')"
       },
 
       backgroundSize: {
-        '1': '0.7rem',
+        1: '0.7rem'
       },
 
       fontFamily: {
@@ -22,15 +22,16 @@ export default {
 
       fontSize: {
         xxxs: '0.625rem', //10px
-        xxs: '0.75rem', //12px
-        xs: [
+        xxs: '0.875rem', //11px
+        xs: '0.75rem', //12px
+        sm: [
           '0.8125rem', //13px
           {
             fontWeight: '400'
           }
         ],
 
-        base: [
+        md: [
           '0.875', //14px
           {
             fontWeight: '400'
@@ -65,7 +66,7 @@ export default {
       maxWidth: {
         96: '24rem', //384px
         203.5: '50.875rem', //814px
-        295: '73.75rem', //1180px
+        295: '73.75rem' //1180px
       },
 
       minHeight: {
@@ -73,7 +74,7 @@ export default {
       },
 
       minWidth: {
-        62.5: '15.625rem', //250px
+        62.5: '15.625rem' //250px
       },
 
       spacing: {
@@ -88,12 +89,12 @@ export default {
         4.3: '1.0625rem', //17px
         50: '12.5rem', //200px
         295: '73.75rem', //1180px
-        '68.7': '68.7%',
+        68.7: '68.7%'
       },
 
       textUnderlineOffset: {
-        middle: '-40%',
-    },
+        middle: '-40%'
+      },
 
       width: {
         '2/25': '8%',
@@ -101,9 +102,9 @@ export default {
         '4/25': '16.5%',
         '5/25': '20.5%',
         '11/25': '43.5%',
-        '31.3': '31.3%',
+        31.3: '31.3%'
       }
     }
   },
-  plugins: [],
+  plugins: []
 }

@@ -5,7 +5,7 @@
         <BaseHeading title="Lista todo" tag="h2" />
         <BaseHeading :title="`Wykonane: ${counter}`" tag="h3" />
       </div>
-      <ul class="pt-2.5 text-xs divide-y-1 flex flex-col justify-center" @click="v$.$reset()">
+      <ul class="pt-2.5 text-sm divide-y-1 flex flex-col justify-center" @click="v$.$reset()">
         <TodoItem
           v-for="{ id, description } in todos"
           :key="id"
@@ -27,7 +27,7 @@
               v-model="state.newTodo"
               id="todo"
               placeholder="Dodaj nowy element checklisty"
-              class="w-full text-xs font-bold indent-0.5"
+              class="w-full text-sm font-bold indent-0.5"
               :class="v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''"
               @blur="v$.newTodo.$touch"
               @keyup.enter="addTodo"

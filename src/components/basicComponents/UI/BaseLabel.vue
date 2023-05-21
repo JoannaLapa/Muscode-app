@@ -2,7 +2,7 @@
   <div
     class="absolute w-[114px] h-[88px] top-0 right-0"
   >
-    <div class="relative bg-black text-white text-center font-medium text-xxs rotate-45 left-[4px] top-[24px] w-[140px] pb-0.5">
+    <div class="relative bg-black text-white text-center font-medium text-xs rotate-45 left-[4px] top-[24px] w-[140px] pb-0.5">
       <p>{{ sale }}</p>
     </div>
   </div>

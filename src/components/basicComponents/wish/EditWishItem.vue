@@ -12,7 +12,7 @@
       >
         <form @submit.prevent="updateWishItem" class="grid grid-cols-1 h-full">
           <fieldset class="flex flex-col items-center gap-5">
-            <div class="font-medium text-base md:text-xl w-full border-b-4 border-success-200">
+            <div class="font-medium text-md md:text-xl w-full border-b-4 border-success-200">
               <legend id="title" autofocus tabindex="0" class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7">
                 Edycja produktu:
 
@@ -24,7 +24,7 @@
               <img :src="wish.photo" :alt="wish.name" class="w-32 h-32 lg:w-50 lg:h-50" />
             </div>
 
-            <div class="w-full px-2.7 text-xxs flex flex-col gap-3.7">
+            <div class="w-full px-2.7 text-xs flex flex-col gap-3.7">
               <BaseForm :element="wish.name" title="Nazwa produktu">
                 <input
                   :id="wish.name"

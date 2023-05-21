@@ -4,7 +4,7 @@
       <table class="table-fixed w-full border-collapse text-left p-2">
         <BaseHeading tag="caption" title="Lista Produktów" class="sm:pb-3" />
         <!-- <colgroup span="5"></colgroup> -->
-        <thead class="uppercase text-2.7 font-normal">
+        <thead class="uppercase text-xs font-normal">
           <!-- <th v-for="keyName in keys" :key="keyName" scope="col">{{ keyName }}</th> -->
           <th scope="col" class="w-2/25 pl-2.5 pb-1.5">{{ keys[0] }}</th>
           <th scope="col" class="w-11/25 pt-1">{{ keys[1] }}</th>
@@ -18,7 +18,7 @@
           <tr
             v-for="{ id, name, sale, price, currency } in tableElements"
             :key="id"
-            class="text-xxs font-medium hover:bg-neutral-100 transition duration-300"
+            class="text-xs font-medium hover:bg-neutral-100 transition duration-300"
           >
             <td class="w-2/25 pb-1 pt-0.7 pl-2.5">{{ id }}</td>
             <th class="w-11/25 font-medium">{{ name }}</th>
