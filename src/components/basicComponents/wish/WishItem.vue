@@ -5,16 +5,13 @@
 
       <BaseHeading :title="element.name" />
 
-      <div class="flex flex-col justify-center items-center py-2 w-full gap-3 text-center">
+      <div class="flex flex-col justify-center items-center py-2 w-full text-center">
         <img
           :src="element.photoBase"
           :alt="element.name"
-          :height="element.photoBaseHeight"
-          :width="element.photoBaseWidth"
         />
 
-        <div>
-          <p class="text-success-100 font-bold text-base" v-if="element.sale">
+          <p class="text-success-100 font-bold text-base mt-3" v-if="element.sale">
             {{ `${element.sale} ${element.currency}` }}
           </p>
 
@@ -22,12 +19,11 @@
             :class="
               element.hasOwnProperty('sale') === true
                 ? 'underline-offset-middle underline align-text-bottom text-sm p-0.5'
-                : 'text-success-100 font-bold'
+                : 'text-success-100 font-bold mt-3'
             "
           >
             {{ `${element.price} ${element.currency}` }}
           </p>
-        </div>
       </div>
     </figure>
   </BaseBox>

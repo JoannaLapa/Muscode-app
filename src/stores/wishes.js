@@ -11,11 +11,7 @@ export const useWishesStore = defineStore('wishes', {
           sale: 649,
           currency: '$',
           photoBase: '/assets/img1_133_200.jpg',
-          photoBaseWidth: 133,
-          photoBaseHeight: 200,
           photoEdit: '/assets/img1_200_300.jpg',
-          photoEditWidth: 200,
-          photoEditHeight: 300
         },
 
         {
@@ -25,11 +21,7 @@ export const useWishesStore = defineStore('wishes', {
           sale: 600,
           currency: '$',
           photoBase: '/assets/img2_169_200.jpg',
-          photoBaseWidth: 169,
-          photoBaseHeight: 200,
           photoEdit: '/assets/img2_200_237.jpg',
-          photoEditWidth: 200,
-          photoEditHeight: 237
         },
 
         {
@@ -38,11 +30,7 @@ export const useWishesStore = defineStore('wishes', {
           price: 8000,
           currency: 'PLN',
           photoBase: '/assets/img3_343_200.jpg',
-          photoBaseWidth: 343,
-          photoBaseHeight: 200,
           photoEdit: '/assets/img3_343_200.jpg',
-          photoEditWidth: 343,
-          photoEditHeight: 200
         }
       ],
 

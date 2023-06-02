@@ -26,15 +26,9 @@
             </div>
 
             <div
-              class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5 flex items-center"
+              class="rounded-full overflow-hidden shadow-3xl w-32 h-32 lg:w-50 lg:h-50 mt-2.5 flex items-center justify-center"
             >
-              <img
-                :src="wish.photoEdit"
-                :alt="wish.name"
-                :width="wish.photoEditWidth"
-                :height="wish.photoEditHeight"
-                class="max-h-50"
-              />
+              <img :src="wish.photoEdit" :alt="wish.name" class="h-auto w-full max-h-50" />
             </div>
 
             <div class="w-full px-2.7 text-sm flex flex-col gap-3.7 lg:pl-3">
