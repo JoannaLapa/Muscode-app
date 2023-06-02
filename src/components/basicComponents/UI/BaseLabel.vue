@@ -11,9 +11,7 @@
 <script setup>
 import { computed } from 'vue';
 
-/*
-props
-*/
+/* props */
 
 const props = defineProps({
   element: {
@@ -22,9 +20,7 @@ const props = defineProps({
   }
 });
 
-/*
-sale calculation
-*/
+/* sale calculation */
 
 const sale = computed(() => {
   if (!props.element.sale) return;

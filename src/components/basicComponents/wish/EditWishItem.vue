@@ -138,9 +138,7 @@ import { useVuelidate } from '@vuelidate/core';
 import { required, maxValue, minValue, helpers } from '@vuelidate/validators';
 import { reactive, computed, ref } from 'vue';
 
-/*
-props
-*/
+/* props */
 
 const props = defineProps({
   wishId: {
@@ -149,18 +147,14 @@ const props = defineProps({
   }
 });
 
-/*
-emits
-*/
+/* emits */
 
 const emit = defineEmits(['toggleModal']);
 const handleModal = () => {
   emit('toggleModal');
 };
 
-/*
-data
-*/
+/* data */
 
 const wishStore = useWishesStore();
 const wish = computed(() => wishStore.getWishById(props.wishId));
@@ -172,9 +166,7 @@ const state = reactive({
 
 const selected = ref(wish.value.currency);
 
-/*
-validation
-*/
+/* validation */
 
 const maxSale = ref();
 maxSale.value = computed(() => state.newWishPrice - 1);
@@ -211,9 +203,7 @@ const rules = {
 
 const v$ = useVuelidate(rules, state);
 
-/*
-updateWishItem
-*/
+/* updateWishItem */
 
 async function updateWishItem() {
   const isFormCorrect = await v$.value.$validate();

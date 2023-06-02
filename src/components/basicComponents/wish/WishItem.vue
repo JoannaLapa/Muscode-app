@@ -41,15 +41,11 @@ import BaseBox from '../UI/BaseBox.vue';
 import BaseHeading from '../UI/BaseHeading.vue';
 import { ref, defineAsyncComponent } from 'vue';
 
-/*
-async component
-*/
+/* async component */
 
 const EditWishItem = defineAsyncComponent(() => import('./EditWishItem.vue'));
 
-/*
-props
-*/
+/* props */
 
 defineProps({
   element: {
@@ -58,9 +54,7 @@ defineProps({
   }
 });
 
-/*
-showModal logic
-*/
+/* showModal logic */
 
 const showModal = ref(false);
 const toggleModal = () => {

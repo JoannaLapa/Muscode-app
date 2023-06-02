@@ -25,9 +25,7 @@ const todoStore = useTodoStore();
 
 const checkboxValue = ref(false);
 
-/*
-props
-*/
+/* props */
 
 const props = defineProps({
   id: {
@@ -40,9 +38,7 @@ const props = defineProps({
   }
 });
 
-/*
-add new todo
-*/
+/* add new todo */
 
 const addValue = () => {
   todoStore.toggleCheckboxValue(props.id, checkboxValue.value);

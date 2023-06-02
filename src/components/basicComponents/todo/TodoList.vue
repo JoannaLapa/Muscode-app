@@ -69,9 +69,7 @@ const state = reactive({
   newTodo: ''
 });
 
-/*
-validation
-*/
+/* validation */
 
 const rules = {
   newTodo: {
@@ -82,9 +80,7 @@ const rules = {
 
 const v$ = useVuelidate(rules, state);
 
-/*
-addTodo
-*/
+/* addTodo */
 
 const addTodo = async () => {
   const isFormCorrect = await v$.value.$validate();

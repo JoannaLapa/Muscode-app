@@ -11,9 +11,7 @@
     text-decoration-skip-ink: none;
   }
 
-  /*
-  input default styles reset
-  */
+  /*   input default styles reset   */
 
   input[type='number']::-webkit-outer-spin-button,
   input[type='number']::-webkit-inner-spin-button,
