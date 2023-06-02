@@ -1,10 +1,10 @@
 <template>
   <div class="absolute w-28.5 h-22 top-0 right-0">
-    <div
+    <p
       class="relative bg-black text-white text-center font-medium text-xs rotate-45 left-1 top-6 w-35 pb-0.5"
     >
-      <p>{{ sale }}</p>
-    </div>
+      {{ sale }}
+    </p>
   </div>
 </template>
 
