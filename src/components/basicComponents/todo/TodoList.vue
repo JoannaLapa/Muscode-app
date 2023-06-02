@@ -51,23 +51,23 @@
 </template>
 
 <script setup>
-import TodoItem from './TodoItem.vue'
-import BaseBox from '../UI/BaseBox.vue'
-import BaseErrorMsg from '../UI/BaseErrorMsg.vue'
-import BaseHeading from '../UI/BaseHeading.vue'
-import { useTodoStore } from '../../../stores/todo.js'
-import { ref, reactive, computed } from 'vue'
-import { useVuelidate } from '@vuelidate/core'
-import { required } from '@vuelidate/validators'
+import TodoItem from './TodoItem.vue';
+import BaseBox from '../UI/BaseBox.vue';
+import BaseErrorMsg from '../UI/BaseErrorMsg.vue';
+import BaseHeading from '../UI/BaseHeading.vue';
+import { useTodoStore } from '../../../stores/todo.js';
+import { ref, reactive, computed } from 'vue';
+import { useVuelidate } from '@vuelidate/core';
+import { required } from '@vuelidate/validators';
 
-const todoStore = useTodoStore()
-const todos = computed(() => todoStore.getTodos)
-const counter = computed(() => todoStore.countedChecks)
-const checkedboxValues = ref([])
+const todoStore = useTodoStore();
+const todos = computed(() => todoStore.getTodos);
+const counter = computed(() => todoStore.countedChecks);
+const checkedboxValues = ref([]);
 
 const state = reactive({
   newTodo: ''
-})
+});
 
 /*
 validation
@@ -78,18 +78,18 @@ const rules = {
     required,
     $lazy: true
   }
-}
+};
 
-const v$ = useVuelidate(rules, state)
+const v$ = useVuelidate(rules, state);
 
 /*
 addTodo
 */
 
 const addTodo = async () => {
-  const isFormCorrect = await v$.value.$validate()
-  if (!isFormCorrect) return
-  todoStore.addTodo(state.newTodo)
-  state.newTodo = ''
-}
+  const isFormCorrect = await v$.value.$validate();
+  if (!isFormCorrect) return;
+  todoStore.addTodo(state.newTodo);
+  state.newTodo = '';
+};
 </script>

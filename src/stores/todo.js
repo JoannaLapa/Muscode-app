@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useTodoStore = defineStore('todo', {
   state: () => {
@@ -36,40 +36,40 @@ export const useTodoStore = defineStore('todo', {
       ],
 
       checkboxValues: []
-    }
+    };
   },
 
   getters: {
     getTodos() {
-      return this.todos
+      return this.todos;
     },
 
     getCheckboxValues() {
-      return this.checkboxValues
+      return this.checkboxValues;
     },
 
     countedChecks() {
-      return this.checkboxValues.filter((item) => item === true).length
+      return this.checkboxValues.filter((item) => item === true).length;
     },
 
     includesValue() {
-      return (id) => this.checkboxValues.includes(id)
+      return (id) => this.checkboxValues.includes(id);
     }
   },
 
   actions: {
     addTodo(description) {
-      const id = this.todos.length
-      return this.todos.push({ id: id, description: description, checked: false })
+      const id = this.todos.length;
+      return this.todos.push({ id: id, description: description, checked: false });
     },
 
     setCheckboxValues() {
-      return (this.checkboxValues = this.todos.map((item) => item.checked))
+      return (this.checkboxValues = this.todos.map((item) => item.checked));
     },
 
     toggleCheckboxValue(id, value) {
-      console.log(this.checkboxValues)
-      return (this.checkboxValues[id] = value)
+      console.log(this.checkboxValues);
+      return (this.checkboxValues[id] = value);
     }
   }
-})
+});

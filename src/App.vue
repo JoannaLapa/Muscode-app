@@ -3,11 +3,11 @@
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
-import { onMounted } from 'vue'
-import { useTodoStore } from './stores/todo.js'
+import { RouterView } from 'vue-router';
+import { onMounted } from 'vue';
+import { useTodoStore } from './stores/todo.js';
 
-const todoStore = useTodoStore()
+const todoStore = useTodoStore();
 
-onMounted(todoStore.setCheckboxValues)
+onMounted(todoStore.setCheckboxValues);
 </script>

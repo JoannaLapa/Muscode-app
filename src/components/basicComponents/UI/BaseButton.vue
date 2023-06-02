@@ -28,5 +28,5 @@ defineProps({
     default: 'button',
     validation: (tag) => ['button', 'router-link'].includes(tag)
   }
-})
+});
 </script>

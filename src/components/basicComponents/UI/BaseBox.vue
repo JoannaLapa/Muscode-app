@@ -19,5 +19,5 @@ defineProps({
     default: '',
     validation: (variant) => ['primary', 'secondary'].includes(variant)
   }
-})
+});
 </script>

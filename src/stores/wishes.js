@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useWishesStore = defineStore('wishes', {
   state: () => {
@@ -47,45 +47,45 @@ export const useWishesStore = defineStore('wishes', {
       ],
 
       wishKeys: ['#', 'nazwa', 'promocyjna cena', 'cena', 'waluta']
-    }
+    };
   },
 
   actions: {
     updateWishItem(id, name, price, sale, currency) {
-      const wish = this.wishes.find((wish) => wish.id === id)
-      wish.name = name
-      wish.price = price
-      wish.sale = sale
-      wish.currency = currency
+      const wish = this.wishes.find((wish) => wish.id === id);
+      wish.name = name;
+      wish.price = price;
+      wish.sale = sale;
+      wish.currency = currency;
       if (wish.sale === undefined || wish.sale === '') {
-        delete wish.sale
+        delete wish.sale;
       }
-      return wish
+      return wish;
     },
 
     toggleShowModal() {
-      return (this.showModal = !this.showModal)
+      return (this.showModal = !this.showModal);
     }
   },
 
   getters: {
     getWishes() {
-      return this.wishes
+      return this.wishes;
     },
 
     getWishById(state) {
-      const wishes = state.wishes
+      const wishes = state.wishes;
       return (id) => {
-        const wish = wishes.find((wish) => wish.id === id)
-        return wish
-      }
+        const wish = wishes.find((wish) => wish.id === id);
+        return wish;
+      };
     },
 
     getSalePercent: (state) => {
       return (id) => {
-        const sale = (state.wishes[id].sale / state.wishes[id].price) * 100
-        return sale
-      }
+        const sale = (state.wishes[id].sale / state.wishes[id].price) * 100;
+        return sale;
+      };
     }
   }
-})
+});

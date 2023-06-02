@@ -130,13 +130,13 @@
   </Teleport>
 </template>
 <script setup>
-import BaseButton from '../UI/BaseButton.vue'
-import BaseForm from '../UI/BaseForm.vue'
-import BaseErrorMsg from '../UI/BaseErrorMsg.vue'
-import { useWishesStore } from '../../../stores/wishes.js'
-import { useVuelidate } from '@vuelidate/core'
-import { required, maxValue, minValue, helpers } from '@vuelidate/validators'
-import { reactive, computed, ref } from 'vue'
+import BaseButton from '../UI/BaseButton.vue';
+import BaseForm from '../UI/BaseForm.vue';
+import BaseErrorMsg from '../UI/BaseErrorMsg.vue';
+import { useWishesStore } from '../../../stores/wishes.js';
+import { useVuelidate } from '@vuelidate/core';
+import { required, maxValue, minValue, helpers } from '@vuelidate/validators';
+import { reactive, computed, ref } from 'vue';
 
 /*
 props
@@ -147,42 +147,42 @@ const props = defineProps({
     type: Number,
     required: true
   }
-})
+});
 
 /*
 emits
 */
 
-const emit = defineEmits(['toggleModal'])
+const emit = defineEmits(['toggleModal']);
 const handleModal = () => {
-  emit('toggleModal')
-}
+  emit('toggleModal');
+};
 
 /*
 data
 */
 
-const wishStore = useWishesStore()
-const wish = computed(() => wishStore.getWishById(props.wishId))
+const wishStore = useWishesStore();
+const wish = computed(() => wishStore.getWishById(props.wishId));
 const state = reactive({
   newWishName: wish.value.name,
   newWishPrice: wish.value.price,
   newWishSale: wish.value.sale
-})
+});
 
-const selected = ref(wish.value.currency)
+const selected = ref(wish.value.currency);
 
 /*
 validation
 */
 
-const maxSale = ref()
-maxSale.value = computed(() => state.newWishPrice - 1)
-const minPrice = ref()
+const maxSale = ref();
+maxSale.value = computed(() => state.newWishPrice - 1);
+const minPrice = ref();
 minPrice.value = computed(() => {
-  if (state.newWishSale === undefined) return 1
-  return state.newWishSale + 1
-})
+  if (state.newWishSale === undefined) return 1;
+  return state.newWishSale + 1;
+});
 
 const rules = {
   newWishName: {
@@ -207,17 +207,17 @@ const rules = {
     minValue: helpers.withMessage('Promocja musi być wyższa lub równa 1', minValue(1)),
     $lazy: true
   }
-}
+};
 
-const v$ = useVuelidate(rules, state)
+const v$ = useVuelidate(rules, state);
 
 /*
 updateWishItem
 */
 
 async function updateWishItem() {
-  const isFormCorrect = await v$.value.$validate()
-  if (!isFormCorrect) return
+  const isFormCorrect = await v$.value.$validate();
+  if (!isFormCorrect) return;
 
   wishStore.updateWishItem(
     props.wishId,
@@ -225,7 +225,7 @@ async function updateWishItem() {
     state.newWishPrice,
     state.newWishSale,
     selected
-  )
-  handleModal()
+  );
+  handleModal();
 }
 </script>

@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 /*
 props
@@ -20,15 +20,15 @@ const props = defineProps({
     type: Object,
     required: true
   }
-})
+});
 
 /*
 sale calculation
 */
 
 const sale = computed(() => {
-  if (!props.element.sale) return
-  const countedSale = Math.round(100 - (props.element.sale / props.element.price) * 100)
-  return `-${countedSale}%`
-})
+  if (!props.element.sale) return;
+  const countedSale = Math.round(100 - (props.element.sale / props.element.price) * 100);
+  return `-${countedSale}%`;
+});
 </script>

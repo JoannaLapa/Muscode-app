@@ -10,5 +10,5 @@ defineProps({
     type: String,
     default: 'Pole nie może być puste'
   }
-})
+});
 </script>

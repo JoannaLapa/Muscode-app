@@ -36,16 +36,16 @@
 </template>
 
 <script setup>
-import BaseLabel from '../UI/BaseLabel.vue'
-import BaseBox from '../UI/BaseBox.vue'
-import BaseHeading from '../UI/BaseHeading.vue'
-import { ref, defineAsyncComponent } from 'vue'
+import BaseLabel from '../UI/BaseLabel.vue';
+import BaseBox from '../UI/BaseBox.vue';
+import BaseHeading from '../UI/BaseHeading.vue';
+import { ref, defineAsyncComponent } from 'vue';
 
 /*
 async component
 */
 
-const EditWishItem = defineAsyncComponent(() => import('./EditWishItem.vue'))
+const EditWishItem = defineAsyncComponent(() => import('./EditWishItem.vue'));
 
 /*
 props
@@ -56,17 +56,15 @@ defineProps({
     type: Object,
     required: true
   }
-})
+});
 
 /*
 showModal logic
 */
 
-const showModal = ref(false)
+const showModal = ref(false);
 const toggleModal = () => {
-  document.documentElement.classList.toggle('overflow-hidden')
-  showModal.value = !showModal.value
-}
+  document.documentElement.classList.toggle('overflow-hidden');
+  showModal.value = !showModal.value;
+};
 </script>
-
-

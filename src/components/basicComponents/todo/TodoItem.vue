@@ -17,13 +17,13 @@
 </template>
 
 <script setup>
-import CheckIcon from '../icons/CheckIcon.vue'
-import { useTodoStore } from '../../../stores/todo.js'
-import { ref } from 'vue'
+import CheckIcon from '../icons/CheckIcon.vue';
+import { useTodoStore } from '../../../stores/todo.js';
+import { ref } from 'vue';
 
-const todoStore = useTodoStore()
+const todoStore = useTodoStore();
 
-const checkboxValue = ref(false)
+const checkboxValue = ref(false);
 
 /*
 props
@@ -38,13 +38,13 @@ const props = defineProps({
     type: String,
     required: true
   }
-})
+});
 
 /*
 add new todo
 */
 
 const addValue = () => {
-  todoStore.toggleCheckboxValue(props.id, checkboxValue.value)
-}
+  todoStore.toggleCheckboxValue(props.id, checkboxValue.value);
+};
 </script>

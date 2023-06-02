@@ -46,8 +46,8 @@
 </template>
 
 <script setup>
-import BaseBox from '../UI/BaseBox.vue'
-import BaseHeading from '../UI/BaseHeading.vue'
+import BaseBox from '../UI/BaseBox.vue';
+import BaseHeading from '../UI/BaseHeading.vue';
 
 defineProps({
   keys: {
@@ -59,5 +59,5 @@ defineProps({
     type: Array,
     required: true
   }
-})
+});
 </script>

@@ -2,7 +2,7 @@
 /*eslint no-undef: "error"*/
 
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js}'],
@@ -117,4 +117,4 @@ export default {
     }
   },
   plugins: []
-}
+};
