@@ -6,6 +6,7 @@
       aria-hidden="true"
       aria-labelledby="title"
       class="fixed top-0 left-0 z-1 h-full w-full bg-neutral-300"
+      @click="handleModal"
     >
       <div
         class="bg-white relative w-3/4 left-1/4 sm:w-2/4 sm:left-2/4 lg:w-31.3 lg:left-68.7 h-screen"
