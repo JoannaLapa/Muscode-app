@@ -6,31 +6,31 @@ export const useTodoStore = defineStore('todo', {
       todos: [
         {
           id: 0,
-          description: 'Lorem ipsum dolor sit amet, consectetur',
+          description: 'Typescript daily learning 30min',
           checked: false
         },
 
         {
           id: 1,
-          description: 'Sed do eiusmod tempor incididunt',
+          description: 'React daily learning 30min',
           checked: false
         },
 
         {
           id: 2,
-          description: 'Labore et dolore magna aliqua',
+          description: 'Add remove todos func.',
           checked: false
         },
 
         {
           id: 3,
-          description: 'Sed ut perspiciatis unde omnis iste natus',
+          description: 'Add Cypress Tests',
           checked: false
         },
 
         {
           id: 4,
-          description: 'Minima veniam, quis nostrum exercitationem',
+          description: 'Transport website project',
           checked: false
         }
       ],
@@ -60,7 +60,7 @@ export const useTodoStore = defineStore('todo', {
   actions: {
     addTodo(description) {
       const id = this.todos.length;
-      return this.todos.push({ id: id, description: description, checked: false });
+      return this.todos.push({ id, description, checked: false });
     },
 
     setCheckboxValues() {
@@ -68,7 +68,6 @@ export const useTodoStore = defineStore('todo', {
     },
 
     toggleCheckboxValue(id, value) {
-      console.log(this.checkboxValues);
       return (this.checkboxValues[id] = value);
     }
   }
