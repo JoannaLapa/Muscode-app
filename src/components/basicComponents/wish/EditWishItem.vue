@@ -10,6 +10,7 @@
     >
       <div
         class="bg-white relative w-3/4 left-1/4 sm:w-2/4 sm:left-2/4 lg:w-31.3 lg:left-68.7 h-screen"
+        @click.stop=""
       >
         <form @submit.prevent="updateWishItem" class="grid grid-cols-1 h-full">
           <fieldset class="flex flex-col items-center gap-5">
@@ -40,7 +41,7 @@
                   v-model="state.newWishName"
                   :class="
                     v$.newWishName.$error
-                      ? 'focus:border-2 focus:border-danger-200 outline-none'
+                      ? 'focus:border-2 focus:border-danger-200 focus:outline-none'
                       : ''
                   "
                   @blur="v$.newWishName.$touch"
