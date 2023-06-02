@@ -1,8 +1,12 @@
 <template>
   <section class="lg:col-start-2 lg:col-end-4 w-fit">
     <BaseBox variant="secondary">
+      <BaseHeading title="Lista Produktów" class="sm:pb-2" />
+
       <table class="table-fixed w-full border-collapse text-left p-2">
-        <BaseHeading tag="caption" title="Lista Produktów" class="sm:pb-2" />
+        <caption class="sr-only">
+          Zestawienie listy planowanych zakupów
+        </caption>
 
         <thead class="uppercase text-xs">
           <th scope="col" class="w-2/25 pl-2.5 pt-1.5 pb-0.5 font-medium">{{ keys[0] }}</th>

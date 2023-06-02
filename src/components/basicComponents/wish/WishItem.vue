@@ -3,7 +3,7 @@
     <figure>
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
 
-      <BaseHeading :title="element.name" tag="figcaption" />
+      <BaseHeading :title="element.name" />
 
       <div class="flex flex-col justify-center items-center py-2 w-full gap-3 text-center">
         <img

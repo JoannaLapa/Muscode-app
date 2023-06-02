@@ -2,9 +2,9 @@
   <section class="min-w-fit">
     <BaseBox variant="primary">
       <div class="flex justify-between">
-        <BaseHeading title="Lista todo" tag="h2" />
+        <BaseHeading title="Lista todo" />
 
-        <BaseHeading :title="`Wykonane: ${counter}`" tag="h3" />
+        <h3 class="font-normal">{{ `Wykonane: ${counter}` }}</h3>
       </div>
 
       <ul
