@@ -57,7 +57,7 @@ export default {
         'danger-200': '#D73737',
         'neutral-100': ' #f5f8fa', //hover color
         'neutral-200': '#b2b2b2', //color borders
-        'neutral-300': '#00000080', // black with opacity 0.5
+        'neutral-300': '#00000080' // black with opacity 0.5
       },
 
       divideWidth: {
@@ -78,7 +78,6 @@ export default {
         2.5: '0.625rem', //10px
         79: '19.75rem', //316px
         82.5: '20.625rem' //330px
-
       },
 
       minWidth: {
@@ -95,7 +94,7 @@ export default {
         3.5: '0.875rem', //14px
         3.7: '0.9375rem', //15px
         4.3: '1.0625rem', //17px
-        22: '5.5rem',//88px
+        22: '5.5rem', //88px
         28.5: '7.125rem', //114px
         35: '8.75rem', //140px
         50: '12.5rem', //200px

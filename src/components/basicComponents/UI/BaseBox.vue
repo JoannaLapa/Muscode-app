@@ -4,7 +4,8 @@
     :class="{
       'max-w-96 md:min-h-79': variant === 'primary',
       'max-w-96 pb-3, min-h-79 lg:max-w-full': variant === 'secondary',
-      'max-w-96 min-h-82.5 overflow-hidden relative hover:scale-105 transition duration-300': variant === 'tertiary'
+      'max-w-96 min-h-82.5 overflow-hidden relative hover:scale-105 transition duration-300':
+        variant === 'tertiary'
     }"
   >
     <slot />
