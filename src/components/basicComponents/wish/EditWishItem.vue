@@ -19,7 +19,7 @@
                 id="title"
                 autofocus
                 tabindex="0"
-                class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7 text-primary-200"
+                class="p-2 md:pt-4.3 md:pb-3 md:pl-2.7 text-primary-200 focus:outline-none focus:border-success-100 focus:border-2"
               >
                 Edycja produktu:
 
@@ -38,6 +38,7 @@
                 <input
                   :id="wish.name"
                   type="text"
+                  maxlength="20"
                   v-model="state.newWishName"
                   :class="
                     v$.newWishName.$error
@@ -45,7 +46,7 @@
                       : ''
                   "
                   @blur="v$.newWishName.$touch"
-                  class="font-medium"
+                  class="font-medium focus:outline-none focus:border-success-100 focus:border-2"
                 />
               </BaseForm>
 
@@ -53,6 +54,7 @@
                 <input
                   :id="wish.price"
                   type="number"
+                  maxlength="20"
                   v-model="v$.newWishPrice.$model"
                   :class="
                     v$.newWishPrice.$error
@@ -60,7 +62,7 @@
                       : ''
                   "
                   @blur="v$.newWishPrice.$touch"
-                  class="font-medium"
+                  class="font-medium focus:outline-none focus:border-success-100 focus:border-2"
                 />
               </BaseForm>
 
@@ -68,8 +70,9 @@
                 <input
                   :id="wish.sale"
                   type="number"
+                  maxlength="20"
                   v-model="v$.newWishSale.$model"
-                  class="font-medium"
+                  class="font-medium focus:outline-none focus:border-success-100 focus:border-2"
                   :class="
                     v$.newWishSale.$error
                       ? 'focus:border-2 focus:border-danger-200 outline-none'
@@ -88,7 +91,7 @@
               <BaseForm :element="currency" title="Waluta">
                 <select
                   id="currency"
-                  class="bg-white pt-0.5 font-bold pr-1 -mr-1"
+                  class="bg-white pt-0.5 font-bold pr-1 -mr-1 focus:outline-none focus:border-success-100 focus:border-2"
                   v-model="selected"
                 >
                   <option>$</option>

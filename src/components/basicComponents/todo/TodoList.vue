@@ -4,7 +4,7 @@
       <div class="flex justify-between">
         <BaseHeading title="Lista todo" />
 
-        <h3 class="font-normal">{{ `Wykonane: ${counter}` }}</h3>
+        <h3 class="font-normal p-2 sm:p-0">{{ `Wykonane: ${counter}` }}</h3>
       </div>
 
       <ul
@@ -30,11 +30,12 @@
 
             <input
               type="text"
+              maxlength="20"
               name="nowe todo"
               v-model="state.newTodo"
               id="todo"
               placeholder="Dodaj nowy element checklisty"
-              class="w-full text-sm font-bold indent-0.5"
+              class="w-full text-sm font-bold indent-0.5 focus:outline-none focus:border-success-100 focus:border-2"
               :class="
                 v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''
               "
