@@ -1,6 +1,6 @@
 <template>
   <section class="min-w-fit">
-    <BaseBox variant="primary">
+    <BaseBox variant="primary" @click="v$.$reset()">
       <div class="flex justify-between">
         <BaseHeading title="Lista todo" />
 
@@ -9,7 +9,6 @@
 
       <ul
         class="pt-2.5 mb-2.5 text-sm divide-y-1.5 divide-neutral-200 flex flex-col justify-center border-b-1.5 border-neutral-200"
-        @click="v$.$reset()"
       >
         <TodoItem
           v-for="{ id, description } in todos"
@@ -32,19 +31,18 @@
               type="text"
               maxlength="20"
               name="nowe todo"
-              v-model="state.newTodo"
+              v-model="v$.newTodo.$model"
               id="todo"
               placeholder="Dodaj nowy element checklisty"
               class="w-full text-sm font-bold indent-0.5 focus:outline-none focus:border-success-100 focus:border-2"
               :class="
                 v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''
               "
-              @blur="v$.newTodo.$touch"
-              @keyup.enter="addTodo"
+              @keydown.enter="addTodo"
             />
           </form>
 
-          <BaseErrorMsg v-if="v$.newTodo.$error" />
+          <BaseErrorMsg v-for="error of v$.$errors" :key="error.$uid" :title="error.$message" />
         </li>
       </ul>
     </BaseBox>
@@ -59,7 +57,7 @@ import BaseHeading from '../UI/BaseHeading.vue';
 import { useTodoStore } from '../../../stores/todo.js';
 import { ref, reactive, computed } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
-import { required } from '@vuelidate/validators';
+import { required, helpers } from '@vuelidate/validators';
 
 const todoStore = useTodoStore();
 const todos = computed(() => todoStore.getTodos);
@@ -74,8 +72,7 @@ const state = reactive({
 
 const rules = {
   newTodo: {
-    required,
-    $lazy: true
+    required: helpers.withMessage('Pole nie może być puste', required),
   }
 };
 
@@ -83,10 +80,14 @@ const v$ = useVuelidate(rules, state);
 
 /* addTodo */
 
-const addTodo = async () => {
+const addTodo = async (e) => {
   const isFormCorrect = await v$.value.$validate();
   if (!isFormCorrect) return;
-  todoStore.addTodo(state.newTodo);
+  if (state.newTodo) {
+    todoStore.addTodo(state.newTodo);
+  }
   state.newTodo = '';
+  v$.value.$reset()
+  console.log('wywołuję funkcję');
 };
 </script>
