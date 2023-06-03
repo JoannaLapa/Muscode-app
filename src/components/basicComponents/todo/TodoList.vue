@@ -38,7 +38,7 @@
               :class="
                 v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''
               "
-              @keydown.enter="addTodo"
+              @keydown.enter.once="addTodo"
             />
           </form>
 
@@ -88,6 +88,5 @@ const addTodo = async (e) => {
   }
   state.newTodo = '';
   v$.value.$reset()
-  console.log('wywołuję funkcję');
 };
 </script>
