@@ -13,6 +13,18 @@ Used in this project:
 - Pixel Perfect Pro extension
 - [Squ](https://squoosh.app/editor) and [Photopea](https://www.photopea.com/) for pictures optimalizations
 
+Basic functionality
+
+User can: 
+- add item to todolist 
+- mark item as done 
+- see how many items are marked as done
+- see the wishlist 
+- edit the wishlist with price / sale price
+- see the % of sale price on the top right corner 
+
+It is impossible to delete items from wishlist and change the photos
+
 Future development:
 
 - I installed Vitest and Cypress, because I would like to learn testing applications and it would be a good project for that
