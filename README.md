@@ -20,9 +20,10 @@ User can:
 - mark item as done 
 - see how many items are marked as done
 - see the wishlist 
-- edit the wishlist with price / sale price
-- see the % of sale price on the top right corner 
+- edit the wishlist with title / price / sale price 
+- see the % of sale price on the top right corner of product card
 
+All forms have validations.
 It is impossible to delete items from wishlist and change the photos
 
 Future development:
