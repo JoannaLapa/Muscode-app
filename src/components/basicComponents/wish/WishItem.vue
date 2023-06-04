@@ -1,6 +1,5 @@
 <template>
   <BaseBox variant="tertiary" role="button" @click="toggleModal">
-    <figure>
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
 
       <BaseHeading :title="element.name" />
@@ -22,7 +21,6 @@
           {{ `${element.price} ${element.currency}` }}
         </p>
       </div>
-    </figure>
   </BaseBox>
 
   <EditWishItem v-if="showModal" :wishId="element.id" @toggleModal="toggleModal" />
