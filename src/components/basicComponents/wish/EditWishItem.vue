@@ -111,7 +111,6 @@
               variant="primary"
               title="Zapisz"
               type="button"
-              is="button"
               @click="updateWishItem"
             />
 
@@ -119,7 +118,6 @@
               variant="pure"
               title="Anuluj"
               type="button"
-              is="button"
               @click="handleModal"
             />
           </div>
