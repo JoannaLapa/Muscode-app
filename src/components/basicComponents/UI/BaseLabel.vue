@@ -10,6 +10,7 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useSaleCalculation } from '@/use/useSaleCalculation.js';
 
 /* props */
 
@@ -21,10 +22,9 @@ const props = defineProps({
 });
 
 /* sale calculation */
-
+const { countSale } = useSaleCalculation();
 const sale = computed(() => {
   if (!props.element.sale) return;
-  const countedSale = Math.round(100 - (props.element.sale / props.element.price) * 100);
-  return `-${countedSale}%`;
+  return countSale(props.element.sale, props.element.price);
 });
 </script>
