@@ -68,12 +68,5 @@ export const useWishesStore = defineStore('wishes', {
         return wish;
       };
     },
-
-    getSalePercent: (state) => {
-      return (id) => {
-        const sale = (state.wishes[id].sale / state.wishes[id].price) * 100;
-        return sale;
-      };
-    }
   }
 });
