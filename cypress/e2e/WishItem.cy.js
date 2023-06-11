@@ -3,8 +3,10 @@ describe('WishItem', () => {
     cy.visit('/');
     cy.get('[data-test-id="edit-wish-item"]').should('not.exist');
   });
-
-  //     it('EditWishItem should be visible when user click on WishItem')
-//     cy.get('[data-test-id="wish-item"]').click();
-//     cy.get('[data-test-id="edit-wish-item"]').should('be.visible');
+  
+  //code below doesn't work
+  // it('EditWishItem should be visible when user click on WishItem', () => {
+  //   cy.get('[data-test-id="wish-item-1"]').click();
+  //   cy.get('[data-test-id="edit-wish-item"]').should('be.visible');
+  // });
 });

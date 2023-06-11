@@ -1,5 +1,5 @@
 <template>
-  <BaseBox variant="tertiary" role="button" @click="toggleModal" tabindex=0 data-test-id="wish-item" >
+  <BaseBox variant="tertiary" role="button" @click="toggleModal" tabindex=0 data-test-id="wish-item-{element.id}" >
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
 
       <BaseHeading :title="element.name" />
@@ -21,7 +21,7 @@
           {{ `${element.price} ${element.currency}` }}
         </p>
       </div>
-  </BaseBox>
+    </BaseBox>
 
   <EditWishItem v-if="showModal" :wishId="element.id" @toggleModal="toggleModal" />
 </template>
