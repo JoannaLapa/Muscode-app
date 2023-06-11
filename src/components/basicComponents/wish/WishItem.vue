@@ -1,5 +1,5 @@
 <template>
-  <BaseBox variant="tertiary" role="button" @click="toggleModal" tabindex=0>
+  <BaseBox variant="tertiary" role="button" @click="toggleModal" tabindex=0 data-test-id="wish-item" >
       <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
 
       <BaseHeading :title="element.name" />
