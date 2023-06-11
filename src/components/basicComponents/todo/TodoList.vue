@@ -9,6 +9,7 @@
 
       <ul
         class="pt-2.5 mb-2.5 text-sm divide-y-1.5 divide-neutral-200 flex flex-col justify-center border-b-1.5 border-neutral-200"
+        data-test-id="todo-ul"
       >
         <TodoItem
           v-for="{ id, description } in todos"
@@ -43,7 +44,7 @@
             />
           </form>
 
-          <BaseErrorMsg v-for="error of v$.$errors" :key="error.$uid" :title="error.$message" />
+          <BaseErrorMsg v-for="error of v$.$errors" :key="error.$uid" :title="error.$message" data-test-id="new-todo-add-error"/>
         </li>
       </ul>
     </BaseBox>
