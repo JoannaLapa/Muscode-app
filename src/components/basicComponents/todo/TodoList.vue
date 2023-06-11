@@ -39,6 +39,7 @@
                 v$.newTodo.$error ? 'focus:border-2 focus:border-danger-200 outline-none' : ''
               "
               @keydown.enter.once="addTodo"
+              data-test-id="new-todo-add"
             />
           </form>
 
