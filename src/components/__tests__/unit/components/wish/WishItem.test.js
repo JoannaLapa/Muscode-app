@@ -1,5 +1,5 @@
 import WishItem from '@/components/basicComponents/wish/WishItem.vue';
-import { fireEvent, getByRole, render, screen } from '@testing-library/vue';
+import { render, screen } from '@testing-library/vue';
 
 describe('WishItem', () => {
   const renderWishItem = () => {
