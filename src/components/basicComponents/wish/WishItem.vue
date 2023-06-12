@@ -1,27 +1,35 @@
 <template>
-  <BaseBox variant="tertiary" role="button" @click="toggleModal" tabindex=0 data-test-id="wish-item-{element.id}" >
-      <BaseLabel v-if="element.hasOwnProperty('sale') === true" :element="element" />
+  <BaseBox
+    variant="tertiary"
+    role="button"
+    @click="toggleModal"
+    tabindex="0"
+  >
+    <BaseLabel
+      v-if="element.hasOwnProperty('sale') === true"
+      :element="element"
+    />
 
-      <BaseHeading :title="element.name" />
+    <BaseHeading :title="element.name" />
 
-      <div class="flex flex-col justify-center items-center py-2 w-full text-center">
-        <img :src="element.photoBase" :alt="element.name" />
+    <div class="flex flex-col justify-center items-center py-2 w-full text-center">
+      <img :src="element.photoBase" :alt="element.name" />
 
-        <p class="text-success-100 font-bold text-base mt-3" v-if="element.sale">
-          {{ `${element.sale} ${element.currency}` }}
-        </p>
+      <p class="text-success-100 font-bold text-base mt-3" v-if="element.sale" >
+        {{ `${element.sale} ${element.currency}` }}
+      </p>
 
-        <p
-          :class="
-            element.hasOwnProperty('sale') === true
-              ? 'underline-offset-middle underline align-text-bottom text-sm p-0.5'
-              : 'text-success-100 font-bold mt-3'
-          "
-        >
-          {{ `${element.price} ${element.currency}` }}
-        </p>
-      </div>
-    </BaseBox>
+      <p
+        :class="
+          element.hasOwnProperty('sale') === true
+            ? 'underline-offset-middle underline align-text-bottom text-sm p-0.5'
+            : 'text-success-100 font-bold mt-3'
+        "
+      >
+        {{ `${element.price} ${element.currency}` }}
+      </p>
+    </div>
+  </BaseBox>
 
   <EditWishItem v-if="showModal" :wishId="element.id" @toggleModal="toggleModal" />
 </template>
