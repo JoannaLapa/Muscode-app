@@ -7,6 +7,7 @@
       'max-w-96 min-h-82.5 overflow-hidden relative hover:scale-105 transition duration-300 focus:border-success-100 focus:border-dotted focus:outline-none focus:border-2':
         variant === 'tertiary'
     }"
+    data-test="base-box"
   >
     <slot />
   </div>

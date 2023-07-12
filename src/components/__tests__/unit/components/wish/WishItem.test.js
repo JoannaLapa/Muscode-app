@@ -1,5 +1,5 @@
 import WishItem from '@/components/basicComponents/wish/WishItem.vue';
-import { render, screen } from '@testing-library/vue';
+import { render, screen, fireEvent } from '@testing-library/vue';
 
 describe('WishItem', () => {
   const renderWishItem = () => {
@@ -47,4 +47,13 @@ describe('WishItem', () => {
     renderWishItem();
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
+  //code below doesn't work
+  //todo: check if triggers event when clicked on BaseBox, check if event shows modal
+  // it("Emit event on button click", async () => {
+  //   renderWishItem();
+  
+  //   await fireEvent.click(queryByRole('button'))
+  //   expect(screen.queryByRole('dialog')).toBeInTheDocument();
+  // })
 });
+
