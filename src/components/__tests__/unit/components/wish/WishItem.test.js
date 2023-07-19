@@ -47,13 +47,17 @@ describe('WishItem', () => {
     renderWishItem();
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
-  //code below doesn't work
-  //todo: check if triggers event when clicked on BaseBox, check if event shows modal
-  // it("Emit event on button click", async () => {
-  //   renderWishItem();
-  
-  //   await fireEvent.click(queryByRole('button'))
-  //   expect(screen.queryByRole('dialog')).toBeInTheDocument();
-  // })
-});
 
+  //code below doesn't work
+  //todo: check if event shows modal
+
+  it('Renders div role button', () => {
+    renderWishItem();
+    expect(screen.queryByRole('button')).toBeInTheDocument();
+  });
+  it('Emit event on button click', async () => {
+    renderWishItem();
+    const button = screen.queryByRole('button');
+    await fireEvent.click(button);
+  });
+});
